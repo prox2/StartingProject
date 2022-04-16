@@ -110,8 +110,10 @@ const App = () => {
     signIn: async (foundUser) => {
       // setUserToken('fgkj');
       // setIsLoading(false);
+      console.log(foundUser)
       const userToken = String(foundUser[0].userToken);
       const userName = foundUser[0].username;
+      console.log(userToken, userName)
 
       try {
         await AsyncStorage.setItem('userToken', userToken);
